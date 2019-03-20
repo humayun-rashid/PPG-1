@@ -26,7 +26,7 @@ void setup()
   Serial.begin(115200);
   delay(10);
   pinMode(buttonPin, INPUT);
-  Serial.println("MAX30105 Presence Sensing Example");
+  Serial.println("PPG Sensor to collect heart rate");
 
   // Initialize sensor
   if (particleSensor.begin(Wire, I2C_SPEED_FAST) == false) //Use default I2C port, 400kHz speed
@@ -40,7 +40,7 @@ void setup()
 
   //WiFi.config(ip, gateway, subnet);
   WiFi.begin(ssid, password);
-
+  
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
